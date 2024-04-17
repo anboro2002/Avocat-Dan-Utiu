@@ -68,6 +68,10 @@ body{
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.dropdown-menu.show{
+    top: 56px;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -77,3 +81,66 @@ a {
 a:hover {
     text-decoration: none;
   }
+
+#tablet-logo{
+    float: left;
+}
+
+#h1-tablet{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#h1-phone{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.phone-ham-menu{
+    height: 45px;
+    width: 45px;
+}
+
+#phone-logo{
+    float: left;
+}
+
+.overlay-text {
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.overlay-text h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.overlay-text p{
+    font-size:20px;
+    margin-top: 25px;
+}
+
+.servicii-img{
+    transition: filter 0.3s ease;
+}
+
+.servicii-img:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+
+.cabinet-header{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.misiunea-para{
+    margin-top: 20px;
+    font-size:20px;
+    font-weight: bolder;
+}

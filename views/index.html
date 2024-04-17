@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- navbar desktop -->
-    <div class="container-fluid text-center d-none d-lg-block">
+    <div class="container text-center d-none d-lg-block">
         <div class="row align-items-center navbar">
             <div class="col-lg-4 d-flex justify-content-between">
                 <a href="./despre_noi.html">DESPRE NOI</a>
@@ -22,7 +22,20 @@
                 </a>
             </div>
             <div class="col-lg-4 d-flex justify-content-between">
-                <a href="#">SERVICII</a>
+                <a class="nav-link dropdown-toggle" href="./servicii.html" id="dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SERVICII</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown-menu">
+                    <a class="dropdown-item" href="#">Avocat Drept Penal</a>
+                    <a class="dropdown-item" href="#">Avocat Divorturi Bucuresti, Avocat Partaj si Custodie Copii</a>
+                    <a class="dropdown-item" href="#">Executare Silita, Bancar Leasing, Insolventa</a>
+                    <a class="dropdown-item" href="#">Insolventa</a>
+                    <a class="dropdown-item" href="#">Drept Civil si Comercial</a>
+                    <a class="dropdown-item" href="#">Drept Contraventional</a>
+                    <a class="dropdown-item" href="#">Dreptul Muncii</a>
+                    <a class="dropdown-item" href="#">Licente si Autorizatii</a>
+                    <a class="dropdown-item" href="#">Litigii si Executare Silita</a>
+                    <a class="dropdown-item" href="#">Recuperare Creante si Proprietati</a>
+                    <a class="dropdown-item" href="#">Stabilire Sediu Social si Virtual</a>
+                </div>
                 <a href="#">ONORARII</a>
                 <a href="#">CONTACT</a>
             </div>
@@ -32,10 +45,13 @@
     <!-- navbar tableta -->
     <div class="container text-center justify-content-center d-none d-sm-block d-lg-none">
         <div class="row navbar align-items-start">
-            <div class="col-sm-6">
+            <div class="col-sm-2">
                 <a href="../views/index.html">
-                    <img src="../public/Images/logo 1.png" class="img-fluid">
+                    <img src="../public/Images/logo_phone.png" height="70px" width="100px" id="tablet-logo">
                 </a>
+            </div>
+            <div class="col-sm-8">
+                <h1 id="h1-tablet">CABINET DE AVOCAT DAN UTIU</h1>
             </div>
             <div class="off-screen-menu">
                 <ul><a href="./despre_noi.html">DESPRE NOI</a></ul>
@@ -45,7 +61,7 @@
                 <ul><a href="#">ONORARII</a></ul>
                 <ul><a href="#">CONTACT</a></ul>
             </div>
-            <div class="ham-menu col-sm-6">
+            <div class="ham-menu col-sm-2">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -55,11 +71,14 @@
 
     <!-- navbar telefon -->
     <div class="container text-center justify-content-center d-block d-sm-none">
-        <div class="row navbar align-items-start">
-            <div class="col-2">
+        <div class="row navbar align-items-center">
+            <div class="col-3">
                 <a href="../views/index.html">
-                    <img src="../public/Images/logo_phone.png" height="60px" width="85px">
+                    <img src="../public/Images/logo_phone.png" class="img-fluid" id="phone-logo">
                 </a>
+            </div>
+            <div class="col-6">
+                <h1 id="h1-phone">CABINET DE AVOCAT DAN UTIU</h1>
             </div>
             <div class="off-screen-menu">
                 <ul><a href="./despre_noi.html">DESPRE NOI</a></ul>
@@ -69,14 +88,67 @@
                 <ul><a href="#">ONORARII</a></ul>
                 <ul><a href="#">CONTACT</a></ul>
             </div>
-            <div class="ham-menu col-2">
+            <div class="ham-menu col-3 phone-ham-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </div> 
-    
+    <hr class="mb-0">
+
+    <!-- Meniu servicii/home -->
+    <div class="container text-center justify-content-center">
+        <div class="d-none d-lg-block cabinet-header">
+            <h1>CABINET DE AVOCAT DAN UTIU</h1>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-4 col-10 menu-servicii mt-3 mb-3 position-relative">
+                <a href="#" class="d-block">
+                    <img src="../public/Images/block-drept-penal 1.png" class="img-fluid servicii-img">
+                    <div class="overlay-text">
+                        <h2>AVOCAT DREPT PENAL</h2>
+                        <hr>
+                        <p>
+                            Avocatii nostri au experienta in reprezentarea clientilor în fata tuturor instantelor de judecata
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-10 menu-servicii mt-3 mb-3 position-relative">
+                <a href="#" class="d-block">
+                    <img src="../public/Images/block-drept-administrativ 1.png" class="img-fluid servicii-img">
+                    <div class="overlay-text">
+                        <h2>DREPT CIVIL & DIVORTURI</h2>
+                        <hr>
+                        <p>      
+                            Avocat Divorturi, Recunoastere sentinte, Avocat Partaj, Avocat custodie minori, Avocat Contestatii la executare
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-10 menu-servicii mt-3 mb-3 position-relative">
+                <a href="#" class="d-block">
+                    <img src="../public/Images/block-financiar-bancar 1.png" class="img-fluid servicii-img">
+                    <div class="overlay-text">
+                        <h2>AVOCAT EXECUTARE SILITA</h2>
+                        <hr>
+                        <p>      
+                            Avocat insolventa, Avocat executare silita, Consultanta juridica in domeniul executarii silite
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="d-none d-lg-block misiunea-para">
+            <p>
+                Misiunea cabinetului nostru este de a identifica cele mai bune strategii juridice pentru clientii nostrii si de a le aplica in cauzele acestora in vederea obtinerii celor mai bune rezultate
+            </p>
+        </div>
+        
+    </div>
+
+
     <script src="../public/scripts/index.js"></script>
 </body>
 </html>
