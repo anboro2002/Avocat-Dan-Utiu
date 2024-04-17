@@ -24,6 +24,7 @@ body{
 
 .off-screen-menu.active{
     right: 0;
+    z-index: 2;
 }
 
 .ham-menu{
@@ -52,6 +53,10 @@ body{
 
 .ham-menu span:nth-child(3){
     top: 75%;
+}
+
+.ham-menu.active{
+    z-index: 3;
 }
 
 .ham-menu.active span:nth-child(1){
@@ -118,6 +123,34 @@ a:hover {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 25px;
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    .overlay-text h2{
+        font-size: 28px;
+    }
+    .overlay-text p{
+        font-size:24px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .overlay-text h2{
+        font-size: 24px;
+    }
+    .overlay-text p{
+        font-size:20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .overlay-text h2{
+        font-size: 20px;
+    }
+    .overlay-text p{
+        font-size:18px;
+    }
 }
 
 .overlay-text p{
@@ -126,7 +159,7 @@ a:hover {
 }
 
 .servicii-img{
-    transition: filter 0.3s ease;
+    transition: filter .3s ease;
 }
 
 .servicii-img:hover {
@@ -143,4 +176,74 @@ a:hover {
     margin-top: 20px;
     font-size:20px;
     font-weight: bolder;
+}
+
+li::marker{
+    font-size: 0;
+}
+
+.carousel-caption{
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+#news-header{
+    float: top;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    font-size: 26px;
+    font-weight: bolder;
+    color: #000000;
+}
+
+#news-para{
+    font-size: 20px;
+    color: #000000;
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#news-img{
+    filter: blur(10px);
+}
+
+#call-button{
+    margin-top: 3em;
+    background: linear-gradient(90deg, #3DA1E3 16%, rgba(33, 121, 179, 0.96) 39%, rgba(18, 110, 171, 0.963) 53%);
+    border-radius: 30px;
+    text-align: center;
+    height: 50px;
+    font-size: 26px;
+}
+
+#call-button a{
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    #call-button{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #call-button{
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #call-button{
+        font-size: 14px;
+    }
+}
+
+.link-footer{
+    height: 100%;
+    width: 100%;
 }
