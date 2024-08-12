@@ -7,6 +7,20 @@ body{
     margin:auto
 }
 
+#navbar{
+    background-color: white;
+
+}
+
+.full-width-hr {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .off-screen-menu {
     background-color: #5cb7f4;
     height: 100%;
@@ -193,8 +207,8 @@ li::marker{
 
 #news-header{
     float: top;
-    margin-top: 25px;
-    margin-bottom: 35px;
+    margin-top: 10%;
+    margin-bottom: 10%;
     font-size: 26px;
     font-weight: bolder;
     color: #000000;
@@ -206,6 +220,41 @@ li::marker{
     text-align: left;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+#news-link{
+    font-size: 20px;
+    color: #000000;
+    text-align: middle;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+    #news-header{
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 5%;
+    }
+    #news-para{
+        font-size: 18px;
+    }
+    #news-link{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #news-header{
+        font-size: 18zpx;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+#link-stire1{
+    color: #000000a4;
 }
 
 #news-img{
@@ -225,9 +274,27 @@ li::marker{
     width: 100%;
 }
 
+@media screen and (min-width: 1201px) {
+    #text-footer{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #call-button{
+        font-size: 14px;
+    }
+    #text-footer{
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 991px) {
     #call-button{
         font-size: 22px;
+    }
+    #text-footer{
+        font-size: 12px;
     }
 }
 
@@ -235,11 +302,17 @@ li::marker{
     #call-button{
         font-size: 19px;
     }
+    #text-footer{
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 380px) {
     #call-button{
         font-size: 14px;
+    }
+    #text-footer{
+        font-size: 11px;
     }
 }
 
