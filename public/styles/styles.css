@@ -1,13 +1,12 @@
-
-body{
+body {
     color: #000000;
 }
 
 .navbar {
-    margin:auto
+    margin: auto
 }
 
-#navbar{
+#navbar {
     background-color: white;
 
 }
@@ -34,14 +33,14 @@ body{
     align-items: center;
     text-align: center;
     transition: .3s ease;
-  }
+}
 
-.off-screen-menu.active{
+.off-screen-menu.active {
     right: 0;
     z-index: 2;
 }
 
-.ham-menu{
+.ham-menu {
     width: 60px;
     height: 60px;
     margin-left: auto;
@@ -49,7 +48,7 @@ body{
     vertical-align: middle;
 }
 
-.ham-menu span{
+.ham-menu span {
     height: 5px;
     width: 100%;
     background-color: black;
@@ -61,33 +60,33 @@ body{
     transition: .3s ease;
 }
 
-.ham-menu span:nth-child(1){
+.ham-menu span:nth-child(1) {
     top: 25%;
 }
 
-.ham-menu span:nth-child(3){
+.ham-menu span:nth-child(3) {
     top: 75%;
 }
 
-.ham-menu.active{
+.ham-menu.active {
     z-index: 3;
 }
 
-.ham-menu.active span:nth-child(1){
+.ham-menu.active span:nth-child(1) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.ham-menu.active span:nth-child(2){
+.ham-menu.active span:nth-child(2) {
     opacity: 0%;
 }
 
-.ham-menu.active span:nth-child(3){
+.ham-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.dropdown-menu.show{
+.dropdown-menu.show {
     top: 56px;
 }
 
@@ -95,32 +94,32 @@ a {
     text-decoration: none;
     color: inherit;
     margin: auto;
-  }
-  
+}
+
 a:hover {
     text-decoration: none;
-  }
+}
 
-#tablet-logo{
+#tablet-logo {
     float: left;
 }
 
-#h1-tablet{
+#h1-tablet {
     font-size: 36px;
     font-weight: bold;
 }
 
-#h1-phone{
+#h1-phone {
     font-size: 20px;
     font-weight: bold;
 }
 
-.phone-ham-menu{
+.phone-ham-menu {
     height: 45px;
     width: 45px;
 }
 
-#phone-logo{
+#phone-logo {
     float: left;
 }
 
@@ -133,7 +132,7 @@ a:hover {
     opacity: 1;
 }
 
-.overlay-text h2{
+.overlay-text h2 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 25px;
@@ -141,38 +140,41 @@ a:hover {
 }
 
 @media screen and (max-width: 991px) {
-    .overlay-text h2{
+    .overlay-text h2 {
         font-size: 28px;
     }
-    .overlay-text p{
-        font-size:24px;
+
+    .overlay-text p {
+        font-size: 24px;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .overlay-text h2{
+    .overlay-text h2 {
         font-size: 24px;
     }
-    .overlay-text p{
-        font-size:20px;
+
+    .overlay-text p {
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 380px) {
-    .overlay-text h2{
+    .overlay-text h2 {
         font-size: 20px;
     }
-    .overlay-text p{
-        font-size:18px;
+
+    .overlay-text p {
+        font-size: 18px;
     }
 }
 
-.overlay-text p{
-    font-size:20px;
+.overlay-text p {
+    font-size: 20px;
     margin-top: 25px;
 }
 
-.servicii-img{
+.servicii-img {
     transition: filter .3s ease;
 }
 
@@ -181,22 +183,22 @@ a:hover {
     border-radius: 25px;
 }
 
-.cabinet-header{
+.cabinet-header {
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.misiunea-para{
+.misiunea-para {
     margin-top: 20px;
-    font-size:20px;
+    font-size: 20px;
     font-weight: bolder;
 }
 
-li::marker{
+li::marker {
     font-size: 0;
 }
 
-.carousel-caption{
+.carousel-caption {
     width: 100%;
     height: 100%;
     top: 50%;
@@ -205,63 +207,108 @@ li::marker{
     display: flex;
 }
 
-#news-header{
+#news-header {
     float: top;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     font-size: 26px;
     font-weight: bolder;
     color: #000000;
 }
 
-#news-para{
+#news-header-tablet {
+    float: top;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #000000;
+}
+
+#news-header-mobile {
+    float: top;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #000000;
+}
+
+#news-para {
     font-size: 20px;
     color: #000000;
     text-align: left;
     margin-left: 10%;
     margin-right: 10%;
+
 }
 
-#news-link{
+#news-link {
     font-size: 20px;
     color: #000000;
-    text-align: middle;
+    text-align: center;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 10%;
 }
 
+#news-link a {
+    display: inline-block;
+    opacity: 0.7;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+        font-weight: bolder;
+    }
+}
+
 @media screen and (max-width: 1024px) {
-    #news-header{
+    #news-header {
         font-size: 24px;
         margin-top: 0;
         margin-bottom: 5%;
     }
-    #news-para{
+
+    #news-para {
         font-size: 18px;
     }
-    #news-link{
+
+    #news-link {
         font-size: 18px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    #news-header{
+    #news-header {
         font-size: 18zpx;
         margin-top: auto;
         margin-bottom: auto;
     }
 }
 
-#link-stire1{
+#link-stire1 {
     color: #000000a4;
 }
 
-#news-img{
+#news-img {
     filter: blur(10px);
 }
 
-#call-button{
+#call-button {
     margin-top: 3em;
     background: linear-gradient(90deg, #3DA1E3 16%, rgba(33, 121, 179, 0.96) 39%, rgba(18, 110, 171, 0.963) 53%);
     border-radius: 30px;
@@ -270,53 +317,68 @@ li::marker{
     font-size: 26px;
 }
 
-#call-button a{
+#call-button a {
     width: 100%;
 }
 
+@media screen and (min-width: 1500px) {
+    #news-header {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    #news-link {
+        margin-top: 6%;
+    }
+}
+
 @media screen and (min-width: 1201px) {
-    #text-footer{
+    #text-footer {
         font-size: 18px;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    #call-button{
+    #call-button {
         font-size: 14px;
     }
-    #text-footer{
+
+    #text-footer {
         font-size: 15px;
     }
 }
 
 @media screen and (max-width: 991px) {
-    #call-button{
+    #call-button {
         font-size: 22px;
     }
-    #text-footer{
+
+    #text-footer {
         font-size: 12px;
     }
 }
 
 @media screen and (max-width: 576px) {
-    #call-button{
+    #call-button {
         font-size: 19px;
     }
-    #text-footer{
+
+    #text-footer {
         font-size: 12px;
     }
 }
 
 @media screen and (max-width: 380px) {
-    #call-button{
+    #call-button {
         font-size: 14px;
     }
-    #text-footer{
+
+    #text-footer {
         font-size: 11px;
     }
 }
 
-.link-footer{
+.link-footer {
     height: 100%;
     width: 100%;
 }
