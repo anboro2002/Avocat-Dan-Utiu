@@ -50,7 +50,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     text-align: center;
     padding: 20px;
     transition: .3s ease;
@@ -79,16 +79,17 @@ body {
     transition: transform 0.5s linear;
 }
 
-.scrolling{
+.scrolling {
     animation: scroll 10s linear infinite;
     display: inline-block;
 }
 
 @keyframes scroll {
-    from{
+    from {
         transform: translateX(0%);
     }
-    to{
+
+    to {
         transform: translateX(-100%);
     }
 }
@@ -98,7 +99,7 @@ body {
     border-bottom: none;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -443,4 +444,48 @@ li::marker {
 .link-footer {
     height: 100%;
     width: 100%;
+}
+
+#servicii-line {
+    height: 5px;
+    background: url(../Images/carousel_background.png);
+}
+
+
+#title-serviciu {
+    animation: slideInFromLeft 1.5s ease-out;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#servicii-paragraph-1 {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 1.5s ;
+}
+
+#servicii-paragraph-2 {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

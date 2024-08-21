@@ -9,38 +9,75 @@ hamMenu.forEach((hamMenu, index) => {
   });
 });
 
-// dropdown menu pt servicii in desktop
+// Select elements
 const dropDownToggle = document.querySelector(".dropdown-toggle");
 const dropDownMenu = document.querySelector(".dropdown-menu");
 
-// deschide meniul la hover
-dropDownToggle.addEventListener("mouseenter", () => {
-  dropDownToggle.classList.toggle("show");
-  dropDownMenu.classList.toggle("show");
+// Function to show the dropdown
+function showDropdown() {
+  dropDownToggle.classList.add("show");
+  dropDownMenu.classList.add("show");
+}
+
+// Function to hide the dropdown
+function hideDropdown() {
+  dropDownToggle.classList.remove("show");
+  dropDownMenu.classList.remove("show");
+}
+
+// Open menu on hover over the toggle button
+dropDownToggle.addEventListener("mouseenter", showDropdown);
+
+// Keep menu open when hovering over the menu itself
+dropDownMenu.addEventListener("mouseenter", showDropdown);
+
+// Close menu when mouse leaves both the button and the menu
+dropDownToggle.addEventListener("mouseleave", (event) => {
+  // Use a timeout to avoid immediate closing
+  setTimeout(() => {
+    if (!dropDownMenu.matches(":hover") && !dropDownToggle.matches(":hover")) {
+      hideDropdown();
+    }
+  }, 100);
 });
 
-// inchide meniul la click in afara meniului
+dropDownMenu.addEventListener("mouseleave", (event) => {
+  // Use a timeout to avoid immediate closing
+  setTimeout(() => {
+    if (!dropDownMenu.matches(":hover") && !dropDownToggle.matches(":hover")) {
+      hideDropdown();
+    }
+  }, 100);
+});
+
+// Close the menu when clicking outside of it
 document.body.addEventListener("click", (event) => {
-  if (!dropDownMenu.contains(event.target)) {
-    dropDownMenu.classList.remove("show");
+  if (
+    !dropDownMenu.contains(event.target) &&
+    !dropDownToggle.contains(event.target)
+  ) {
+    hideDropdown();
   }
 });
 
 // Selecting necessary elements
-const serviciiLink = document.querySelector('.servicii-link');
-const serviciiSubMenu = document.querySelector('.servicii-sub-menu');
+const serviciiLink = document.querySelector(".servicii-link");
+const serviciiSubMenu = document.querySelector(".servicii-sub-menu");
 
 // Toggle SERVICII dropdown in mobile/tablet navbar
-serviciiLink.addEventListener('click', (event) => {
-    event.stopPropagation();
-    serviciiSubMenu.classList.toggle('hidden');
+serviciiLink.addEventListener("click", (event) => {
+  event.stopPropagation();
+  serviciiSubMenu.classList.toggle("hidden");
 });
 
 // Close the SERVICII submenu when clicking outside of it
-document.body.addEventListener('click', (event) => {
-    if (!serviciiSubMenu.contains(event.target) && !serviciiLink.contains(event.target)) {
-        serviciiSubMenu.classList.add('hidden');  // Hide the submenu if clicked outside
-    }
+document.body.addEventListener("click", (event) => {
+  if (
+    !serviciiSubMenu.contains(event.target) &&
+    !serviciiLink.contains(event.target)
+  ) {
+    serviciiSubMenu.classList.add("hidden"); // Hide the submenu if clicked outside
+  }
 });
 
 // carousel functionality
