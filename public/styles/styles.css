@@ -257,7 +257,7 @@ a:hover {
     font-weight: bolder;
 }
 
-li::marker {
+.carousel-indicators li::marker {
     font-size: 0;
 }
 
