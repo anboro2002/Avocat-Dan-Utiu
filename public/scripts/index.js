@@ -158,3 +158,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Show the initial slide
   showSlide(currentIndex);
 });
+
+// back to top button
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('backToTopBtn');
+
+  window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+          backToTopBtn.style.display = 'block';
+      } else {
+          backToTopBtn.style.display = 'none';
+      }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
+});
